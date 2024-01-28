@@ -1,0 +1,16 @@
+C:\Users\maykk\source\repos\amazonaNucleos\amazonaNucleos\bin\x64\Debug\amazonaNucleos.exe.config
+C:\Users\maykk\source\repos\amazonaNucleos\amazonaNucleos\bin\x64\Debug\amazonaNucleos.exe
+C:\Users\maykk\source\repos\amazonaNucleos\amazonaNucleos\bin\x64\Debug\amazonaNucleos.pdb
+C:\Users\maykk\source\repos\amazonaNucleos\amazonaNucleos\bin\x64\Debug\amazonaNucleos.xml
+C:\Users\maykk\source\repos\amazonaNucleos\amazonaNucleos\bin\x64\Debug\EngineSDKInterfaceCS.dll
+C:\Users\maykk\source\repos\amazonaNucleos\amazonaNucleos\bin\x64\Debug\FormulationColorimetrySDKInterfaceCS.dll
+C:\Users\maykk\source\repos\amazonaNucleos\amazonaNucleos\obj\x64\Debug\amazonaNucleos.vbproj.AssemblyReference.cache
+C:\Users\maykk\source\repos\amazonaNucleos\amazonaNucleos\obj\x64\Debug\amazonaNucleos.vbproj.SuggestedBindingRedirects.cache
+C:\Users\maykk\source\repos\amazonaNucleos\amazonaNucleos\obj\x64\Debug\amazonaNucleos.Form1.resources
+C:\Users\maykk\source\repos\amazonaNucleos\amazonaNucleos\obj\x64\Debug\amazonaNucleos.Resources.resources
+C:\Users\maykk\source\repos\amazonaNucleos\amazonaNucleos\obj\x64\Debug\amazonaNucleos.vbproj.GenerateResource.cache
+C:\Users\maykk\source\repos\amazonaNucleos\amazonaNucleos\obj\x64\Debug\amazonaNucleos.vbproj.CoreCompileInputs.cache
+C:\Users\maykk\source\repos\amazonaNucleos\amazonaNucleos\obj\x64\Debug\amazonaNucleos.vbproj.CopyComplete
+C:\Users\maykk\source\repos\amazonaNucleos\amazonaNucleos\obj\x64\Debug\amazonaNucleos.exe
+C:\Users\maykk\source\repos\amazonaNucleos\amazonaNucleos\obj\x64\Debug\amazonaNucleos.xml
+C:\Users\maykk\source\repos\amazonaNucleos\amazonaNucleos\obj\x64\Debug\amazonaNucleos.pdb

@@ -1,0 +1,14 @@
+PRAGMA encoding = "UTF-8";
+.open ../amazonaDB.db
+.mode csv
+.import "RECIPES LS-V6.csv" recipes
+.import "Spectral final LS 24-04-23.csv" spectral_ls
+.import "Base Coats types.csv" baseCoats_type
+
+.import "RECIPES BC.csv" recipes_bc
+.import "Spectral cumulé BC.csv" spectral_bc
+
+.import "Tag File LS.csv" Tag_File_LS
+.import "Tag File BC.csv" Tag_File_BC
+
+.import "color.csv" color
