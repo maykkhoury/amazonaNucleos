@@ -1,3 +1,8 @@
 *.db filter=lfs diff=lfs merge=lfs -text
 *.bcsqlite filter=lfs diff=lfs merge=lfs -text
 amazonaNucleos/bin/Debug/LUT/LUTmFloat.bin filter=lfs diff=lfs merge=lfs -text
+amazonaNucleos/bin/Debug/LUT/LUTrfabFloat.bin filter=lfs diff=lfs merge=lfs -text
+amazonaNucleos/bin/Debug/dbPaintShop.mdb filter=lfs diff=lfs merge=lfs -text
+amazonaNucleos/bin/Release/LUT/LUTmFloat.bin filter=lfs diff=lfs merge=lfs -text
+amazonaNucleos/bin/Release/LUT/LUTrfabFloat.bin filter=lfs diff=lfs merge=lfs -text
+amazonaNucleos/bin/Release/dbPaintShop.mdb filter=lfs diff=lfs merge=lfs -text
