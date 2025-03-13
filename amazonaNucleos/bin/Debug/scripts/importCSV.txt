@@ -1,14 +1,71 @@
+sqlite3
+
 PRAGMA encoding = "UTF-8";
 .open ../amazonaDB.db
 .mode csv
-.import "RECIPES LS-V6.csv" recipes
-.import "Spectral final LS 24-04-23.csv" spectral_ls
-.import "Base Coats types.csv" baseCoats_type
+.import "./CSV/LS-RECIPES.csv" recipes_ls
+.import "./CSV/LS-SPECTRAL.csv" spectral_ls
+.import "./CSV/LS-TAG.csv" Tag_File_LS
 
-.import "RECIPES BC.csv" recipes_bc
-.import "Spectral cumulé BC.csv" spectral_bc
+.import "./CSV/BC-RECIPES.csv" recipes_bc
+.import "./CSV/BC-SPECTRAL.csv" spectral_bc
+.import "./CSV/BC-TAG.csv" Tag_File_BC
 
-.import "Tag File LS.csv" Tag_File_LS
-.import "Tag File BC.csv" Tag_File_BC
+.import "./CSV/BASE-COAT-TYPES.csv" baseCoats_type
+.import "./CSV/COLOR.csv" color
 
-.import "color.csv" color
+
+
+alter table spectral_ls add column l TEXT;
+alter table spectral_ls add column a TEXT;
+alter table spectral_ls add column b TEXT;
+alter table spectral_ls add column effect TEXT;
+alter table spectral_ls add column tricoat TEXT;
+
+alter table spectral_bc add column l TEXT;
+alter table spectral_bc add column a TEXT;
+alter table spectral_bc add column b TEXT;
+alter table spectral_bc add column effect TEXT;
+alter table spectral_bc add column tricoat TEXT;
+
+
+CREATE TABLE Job (
+    jobId INTEGER PRIMARY KEY AUTOINCREMENT,
+    jobName TEXT NOT NULL,
+    sampleCountForJob INTEGER NOT NULL
+);
+
+CREATE TABLE Sample (
+    sampleId INTEGER PRIMARY KEY AUTOINCREMENT,
+    wlCount INTEGER NOT NULL,
+    datSetCount INTEGER NOT NULL,
+    jobId INTEGER NOT NULL,
+    
+    -- 31 colonnes pour wlIndexes
+    wlIndex_1 INTEGER, wlIndex_2 INTEGER, wlIndex_3 INTEGER, wlIndex_4 INTEGER, wlIndex_5 INTEGER,
+    wlIndex_6 INTEGER, wlIndex_7 INTEGER, wlIndex_8 INTEGER, wlIndex_9 INTEGER, wlIndex_10 INTEGER,
+    wlIndex_11 INTEGER, wlIndex_12 INTEGER, wlIndex_13 INTEGER, wlIndex_14 INTEGER, wlIndex_15 INTEGER,
+    wlIndex_16 INTEGER, wlIndex_17 INTEGER, wlIndex_18 INTEGER, wlIndex_19 INTEGER, wlIndex_20 INTEGER,
+    wlIndex_21 INTEGER, wlIndex_22 INTEGER, wlIndex_23 INTEGER, wlIndex_24 INTEGER, wlIndex_25 INTEGER,
+    wlIndex_26 INTEGER, wlIndex_27 INTEGER, wlIndex_28 INTEGER, wlIndex_29 INTEGER, wlIndex_30 INTEGER,
+    wlIndex_31 INTEGER,
+
+    FOREIGN KEY (jobId) REFERENCES Job(jobId) ON DELETE CASCADE
+);
+
+CREATE TABLE SampleDataSet (
+    datasetId INTEGER PRIMARY KEY AUTOINCREMENT,
+    sampleId INTEGER NOT NULL,
+    spectralSetName TEXT NOT NULL,
+
+    -- 31 colonnes pour wlValues (maintenant en DOUBLE)
+    wlValue_1 DOUBLE, wlValue_2 DOUBLE, wlValue_3 DOUBLE, wlValue_4 DOUBLE, wlValue_5 DOUBLE,
+    wlValue_6 DOUBLE, wlValue_7 DOUBLE, wlValue_8 DOUBLE, wlValue_9 DOUBLE, wlValue_10 DOUBLE,
+    wlValue_11 DOUBLE, wlValue_12 DOUBLE, wlValue_13 DOUBLE, wlValue_14 DOUBLE, wlValue_15 DOUBLE,
+    wlValue_16 DOUBLE, wlValue_17 DOUBLE, wlValue_18 DOUBLE, wlValue_19 DOUBLE, wlValue_20 DOUBLE,
+    wlValue_21 DOUBLE, wlValue_22 DOUBLE, wlValue_23 DOUBLE, wlValue_24 DOUBLE, wlValue_25 DOUBLE,
+    wlValue_26 DOUBLE, wlValue_27 DOUBLE, wlValue_28 DOUBLE, wlValue_29 DOUBLE, wlValue_30 DOUBLE,
+    wlValue_31 DOUBLE,
+
+    FOREIGN KEY (sampleId) REFERENCES Sample(sampleId) ON DELETE CASCADE
+);

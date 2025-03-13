@@ -7,15 +7,31 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{61B19FCB-CD5F-4A2E-A6C2-DD9D3BA6E95C}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>amazonaNucleos.My.MyApplication</StartupObject>
-    <RootNamespace>amazonaNucleos</RootNamespace>
-    <AssemblyName>amazonaNucleos</AssemblyName>
+    <StartupObject>garageApp.My.MyApplication</StartupObject>
+    <RootNamespace>garageApp</RootNamespace>
+    <AssemblyName>garageApp</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <TargetFrameworkProfile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\maykk\OneDrive\Desktop\publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>x64</PlatformTarget>
@@ -24,17 +40,17 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>amazonaNucleos.xml</DocumentationFile>
+    <DocumentationFile>garageApp.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x64</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <DefineDebug>false</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>amazonaNucleos.xml</DocumentationFile>
+    <DocumentationFile>garageApp.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -54,7 +70,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\x64\Debug\</OutputPath>
-    <DocumentationFile>amazonaNucleos.xml</DocumentationFile>
+    <DocumentationFile>garageApp.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
     <DebugType>full</DebugType>
     <PlatformTarget>x64</PlatformTarget>
@@ -63,20 +79,32 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\x64\Release\</OutputPath>
-    <DocumentationFile>amazonaNucleos.xml</DocumentationFile>
+    <DocumentationFile>garageApp.xml</DocumentationFile>
     <Optimize>true</Optimize>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
     <DebugType>pdbonly</DebugType>
-    <PlatformTarget>x64</PlatformTarget>
+    <PlatformTarget>x86</PlatformTarget>
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>garaj2.ico</ApplicationIcon>
   </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>4875187570D93951A75B8D70912EF4F54D8E677A</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>amazonaNucleos_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="EngineSDKInterfaceCS, Version=0.0.0.0, Culture=neutral, processorArchitecture=AMD64">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\EngineSDKInterfaceCS.dll</HintPath>
+      <HintPath>..\..\amazonaNucleosNollReference\amazonaNucleos\bin\Debug\EngineSDKInterfaceCS.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
@@ -87,6 +115,9 @@
     <Reference Include="FormulationColorimetrySDKInterfaceCS, Version=0.0.0.0, Culture=neutral, processorArchitecture=AMD64">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\FormulationColorimetrySDKInterfaceCS.dll</HintPath>
+    </Reference>
+    <Reference Include="JsonReaderSDKInterfaceCS">
+      <HintPath>..\..\..\..\Documents\FormulationSDKs\JsonReaderSDK\Interfaces\CSharp\bin\x64\Release\JsonReaderSDKInterfaceCS.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="NucleosDatabaseSDKInterfaceAutoSCCS, Version=0.0.0.0, Culture=neutral, processorArchitecture=AMD64">
@@ -132,6 +163,7 @@
     <Import Include="ColorimetrySDKCS" />
     <Import Include="EngineSDKCS" />
     <Import Include="Microsoft.VisualBasic" />
+    <Import Include="NucleosDatabaseSDKCS" />
     <Import Include="System" />
     <Import Include="System.Collections" />
     <Import Include="System.Collections.Generic" />
@@ -144,22 +176,156 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DatabaseOperations.vb" />
-    <Compile Include="ListViewComparer.vb" />
-    <Compile Include="NucleosCorrection.Designer.vb">
-      <DependentUpon>NucleosCorrection.vb</DependentUpon>
+    <Compile Include="amazona\assignColorByCode.Designer.vb">
+      <DependentUpon>assignColorByCode.vb</DependentUpon>
     </Compile>
-    <Compile Include="NucleosCorrection.vb">
+    <Compile Include="amazona\assignColorByCode.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NucleosSearchForm.vb">
+    <Compile Include="amazona\beans\Car.vb" />
+    <Compile Include="amazona\beans\AmazonaColor.vb" />
+    <Compile Include="amazona\beans\ColorLanguage.vb" />
+    <Compile Include="amazona\beans\Currency.vb" />
+    <Compile Include="amazona\beans\CurrencyLanguage.vb" />
+    <Compile Include="amazona\beans\Formula.vb" />
+    <Compile Include="amazona\beans\FormulaColor.vb" />
+    <Compile Include="amazona\beans\Garage.vb" />
+    <Compile Include="amazona\beans\GaragePrice.vb" />
+    <Compile Include="amazona\beans\HistoryUpdate.vb" />
+    <Compile Include="amazona\beans\AmazonaLabel.vb" />
+    <Compile Include="amazona\beans\LabelLanguage.vb" />
+    <Compile Include="amazona\beans\Language.vb" />
+    <Compile Include="amazona\beans\Transaction.vb" />
+    <Compile Include="amazona\beans\TransactionFormula.vb" />
+    <Compile Include="amazona\beans\Unit.vb" />
+    <Compile Include="amazona\beans\UnitLanguage.vb" />
+    <Compile Include="amazona\beans\UpdateTable.vb" />
+    <Compile Include="amazona\carCodeLocator.Designer.vb">
+      <DependentUpon>carCodeLocator.vb</DependentUpon>
+    </Compile>
+    <Compile Include="amazona\carCodeLocator.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NucleosSearchForm.Designer.vb">
+    <Compile Include="amazona\colorPrice.Designer.vb">
+      <DependentUpon>colorPrice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="amazona\colorPrice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="amazona\details.Designer.vb">
+      <DependentUpon>details.vb</DependentUpon>
+    </Compile>
+    <Compile Include="amazona\details.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="amazona\formComposed.Designer.vb">
+      <DependentUpon>formComposed.vb</DependentUpon>
+    </Compile>
+    <Compile Include="amazona\formComposed.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="amazona\garageHome.Designer.vb">
+      <DependentUpon>garageHome.vb</DependentUpon>
+    </Compile>
+    <Compile Include="amazona\garageHome.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="amazona\imagePreview.Designer.vb">
+      <DependentUpon>imagePreview.vb</DependentUpon>
+    </Compile>
+    <Compile Include="amazona\imagePreview.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="amazona\importPrices.Designer.vb">
+      <DependentUpon>importPrices.vb</DependentUpon>
+    </Compile>
+    <Compile Include="amazona\importPrices.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="amazona\login.Designer.vb">
+      <DependentUpon>login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="amazona\login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="amazona\modules\DateCreMod.vb" />
+    <Compile Include="amazona\modules\dbNonQueries.vb" />
+    <Compile Include="amazona\modules\dbSelects.vb" />
+    <Compile Include="amazona\modules\FormulaVariants.vb" />
+    <Compile Include="amazona\modules\GlobalVariables.vb" />
+    <Compile Include="amazona\modules\Utility.vb" />
+    <Compile Include="amazona\MyButton.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="amazona\MyCheckBox.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="amazona\MyGroupBox.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="amazona\MyListView.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="amazona\MyMenuStrip.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="amazona\MyRadioButton.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="amazona\MyTextbox.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="amazona\printPreview\CoolPrintPreviewControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="amazona\printPreview\CoolPrintPreviewDialog.Designer.vb">
+      <DependentUpon>CoolPrintPreviewDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="amazona\printPreview\CoolPrintPreviewDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="amazona\printPreview\PageImageList.vb" />
+    <Compile Include="amazona\saveClientFormula.Designer.vb">
+      <DependentUpon>saveClientFormula.vb</DependentUpon>
+    </Compile>
+    <Compile Include="amazona\saveClientFormula.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="amazona\Settings.Designer.vb">
+      <DependentUpon>Settings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="amazona\Settings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="amazona\TransactionForm.Designer.vb">
+      <DependentUpon>TransactionForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="amazona\TransactionForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="amazona\TranslatedLabel.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="amazona\updateForm.Designer.vb">
+      <DependentUpon>updateForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="amazona\updateForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="nucleos\DatabaseOperations.vb" />
+    <Compile Include="nucleos\SampleDataSet.vb" />
+    <Compile Include="nucleos\Sample.vb" />
+    <Compile Include="nucleos\Job.vb" />
+    <Compile Include="nucleos\ListViewComparer.vb" />
+    <Compile Include="nucleos\NucleosSearchForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="nucleos\NucleosSearchForm.Designer.vb">
       <DependentUpon>NucleosSearchForm.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ma3dll.vb" />
+    <Compile Include="nucleos\Ma3dll.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -176,19 +342,67 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="NucleosLogic.vb" />
-    <Compile Include="BaseCoatsTypeDB.vb" />
-    <Compile Include="RecipeDB.vb" />
-    <Compile Include="TagFile.vb" />
-    <Compile Include="SpectralDB.vb" />
-    <Compile Include="SearchElement.vb" />
-    <Compile Include="UtilitiesModule.vb" />
+    <Compile Include="nucleos\NucleosLogic.vb" />
+    <Compile Include="nucleos\BaseCoatsTypeDB.vb" />
+    <Compile Include="nucleos\NucleosSettings.Designer.vb">
+      <DependentUpon>NucleosSettings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="nucleos\NucleosSettings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="nucleos\RecipeDB.vb" />
+    <Compile Include="nucleos\TagFile.vb" />
+    <Compile Include="nucleos\SpectralDB.vb" />
+    <Compile Include="nucleos\SearchElement.vb" />
+    <Compile Include="nucleos\UtilitiesModule.vb" />
+    <Compile Include="SplashScreen.Designer.vb">
+      <DependentUpon>SplashScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="NucleosCorrection.resx">
-      <DependentUpon>NucleosCorrection.vb</DependentUpon>
+    <EmbeddedResource Include="amazona\details.resx">
+      <DependentUpon>details.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NucleosSearchForm.resx">
+    <EmbeddedResource Include="amazona\imagePreview.resx">
+      <DependentUpon>imagePreview.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="amazona\importPrices.resx">
+      <DependentUpon>importPrices.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="amazona\printPreview\CoolPrintPreviewDialog.resx">
+      <DependentUpon>CoolPrintPreviewDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="amazona\assignColorByCode.resx">
+      <DependentUpon>assignColorByCode.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="amazona\carCodeLocator.resx">
+      <DependentUpon>carCodeLocator.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="amazona\colorPrice.resx">
+      <DependentUpon>colorPrice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="amazona\formComposed.resx">
+      <DependentUpon>formComposed.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="amazona\garageHome.resx">
+      <DependentUpon>garageHome.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="amazona\login.resx">
+      <DependentUpon>login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="amazona\Settings.resx">
+      <DependentUpon>Settings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="amazona\TransactionForm.resx">
+      <DependentUpon>TransactionForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="amazona\updateForm.resx">
+      <DependentUpon>updateForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="nucleos\NucleosSearchForm.resx">
       <DependentUpon>NucleosSearchForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -197,8 +411,15 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="nucleos\NucleosSettings.resx">
+      <DependentUpon>NucleosSettings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen.resx">
+      <DependentUpon>SplashScreen.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="amazonaNucleos_TemporaryKey.pfx" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -213,6 +434,21 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="garaj2.ico" />
+    <None Include="Resources\settings-3110 %282%29.png" />
+    <None Include="Resources\settings-3110 %281%29.png" />
+    <None Include="Resources\settings-3110.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
